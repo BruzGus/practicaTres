@@ -33,8 +33,8 @@ public class LoginTodoIST {
 
         mainPage.loginButton.click();
 
-        loginPage.email.type("bryan.cc.652@gmail.com");
-        loginPage.password.type("13r4An13r4An");
+        loginPage.email.type("tuEmail@gmail.com");
+        loginPage.password.type("yourPassword");
         loginPage.loginButton.click();
 
         Assert.assertTrue("ERROR: No se puede realizar el login",todoPage.todayLabel.isDisplayed());
