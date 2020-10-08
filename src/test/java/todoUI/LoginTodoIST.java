@@ -1,6 +1,9 @@
 package todoUI;
 
 import control.Label;
+import io.qameta.allure.Description;
+import io.qameta.allure.Owner;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -23,6 +26,9 @@ public class LoginTodoIST {
     }
 
     @Test
+    @DisplayName("Verify the Login on page TODOISL.COM with user and password")
+    @Description("This test case is to verify the attack of vulnerability using user and password")
+    @Owner("BRYAN AUGUSTO CRUZ CASTRO")
     public void testLoginTodoISL(){
 
         mainPage.loginButton.click();
@@ -31,11 +37,7 @@ public class LoginTodoIST {
         loginPage.password.type("13r4An13r4An");
         loginPage.loginButton.click();
 
-        Assert.assertTrue(todoPage.todayLabel.isDisplayed());
-
-
-
-
+        Assert.assertTrue("ERROR: No se puede realizar el login",todoPage.todayLabel.isDisplayed());
     }
 
     @After
